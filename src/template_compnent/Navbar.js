@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import logo from "../static/img/reddit-logo.png"
 
 class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="/../static/img/reddit-logo"><img style={{width: "40px", height:"40px"}} src={logo}/></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +32,7 @@ class Navbar extends Component {
                                 <a className="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
-                        
+
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
