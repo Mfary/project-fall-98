@@ -7,6 +7,7 @@ import {Route, BrowserRouter} from 'react-router-dom'
 import SignUp from "./components/Signs/SignUp";
 import Topic from "./components/Topic/Topic";
 import FirstPage from "./components/FirstPage";
+import PostMaker from "./components/Posts/PostMaker";
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                 <Route exact path="/sign" render={() => <Sign/>}/>
                 <Route exact path="/signUp" render={() => <SignUp/>}/>
                 <Route exact path="/Home" render={() => <FirstPage/>}/>
+                <Route exact path="/PostMaker" render={() => <PostMaker/>}/>
 
 
             </BrowserRouter>
