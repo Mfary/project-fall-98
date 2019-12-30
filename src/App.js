@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import Navbar from "./template_compnent/Navbar";
+import Home from "./components/Home";
 import './App.css';
 import Sign from './components/Sign.js'
-import {Route, BrowserRouter} from 'react-router-dom'
+import {Route,BrowserRouter} from "react-router-dom";
 import SignUp from "./components/SignUp";
 
 class App extends Component {
@@ -11,9 +12,9 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Navbar/>
-                <Route path="/"/>
-                <Route exact path="/sign" render={() => <Sign/>}/>
-                <Route exact path="/signUp" render={() => <SignUp/>}/>
+                <Route exact path="/" render={() => <Home/>}/>
+                <Route  path="/sign" render={() => <Sign/>}/>
+                <Route  path="/signUp" render={() => <SignUp/>}/>
             </BrowserRouter>
 
 
