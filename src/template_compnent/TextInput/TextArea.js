@@ -1,12 +1,21 @@
 import React, {Component} from 'react'
 import './style.css'
-
+import data from "../../static/jsons/topic.json"
 class TextArea extends Component {
+    constructor(props) {
+        super(props)
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChangeContent = this.handleChangeContent.bind(this);
+        this.handleChangeTitle = this.handleChangeTitle.bind(this);
+    }
 
     state = {
         isVisible: true,
         isTopicNameVisible: true,
         isForChannel: true,
+        content: "",
+        title: "",
     };
 
     componentDidMount() {
@@ -42,7 +51,7 @@ class TextArea extends Component {
     }
 
     render() {
-        console.log("ENTER")
+        //console.log("ENTER")
         let whole_display = "block";
         if (!this.state.isVisible) {
             whole_display = "none";
@@ -63,11 +72,12 @@ class TextArea extends Component {
                     {MakeNew}
                 </button>
                 <div className={"collapse"} id={"collapseInputForm"}>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div style={{display: {topic_display}}}>
                             <div className="md-form">
                                 <label htmlFor="form1">Title</label>
-                                <input type="text" id="form1" className="form-control"/>
+                                <input type="text" id="form1" className="form-control" value={this.state.title}
+                                       onChange={this.handleChangeTitle}/>
 
                             </div>
                         </div>
@@ -75,11 +85,13 @@ class TextArea extends Component {
                             <div className="form-group shadow-textarea">
                                 <label htmlFor="exampleFormControlTextarea6">Content</label>
                                 <textarea className="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
-                                          placeholder="Write something here to make a new channel"></textarea>
+                                          placeholder="Write something here to make a new channel"
+                                          value={this.state.content}
+                                          onChange={this.handleChangeContent}></textarea>
                             </div>
 
                         </div>
-                        <button type="button" className="btn btn-labeled btn-success">
+                        <button type="submit" className="btn btn-labeled btn-success">
                             <span className="btn-label"><span className="glyphicon glyphicon-ok"></span></span>Post
                         </button>
                     </form>
@@ -88,6 +100,40 @@ class TextArea extends Component {
         )
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log(this.state.title);
+        console.log(this.state.content);
+        const uuidv4 = require('uuid/v4');
+        let id = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+        let date = new Date();
+        console.log(date.toDateString())
+        let obje = {
+            id: id,
+            title: this.state.title,
+            content: this.state.content,
+            Date: date,
+            author: "Ali",
+            CommentId: []
+        };
+
+        const newData = [obje , ...data];
+        console.log(newData);
+        const jsoner = JSON.stringify( newData);
+        console.log(jsoner)
+        //TODO SAVE IN FILE
+
+
+
+    }
+
+    handleChangeContent(event) {
+        this.setState({content: event.target.value});
+    }
+
+    handleChangeTitle(event) {
+        this.setState({title: event.target.value});
+    }
 }
 
 export default TextArea
