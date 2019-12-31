@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "./post.css"
+import 'uuid'
 
 class Post extends Component {
     state = {
@@ -14,6 +15,9 @@ class Post extends Component {
     };
 
     componentDidMount() {
+        const uuidv4 = require('uuid/v4');
+        console.log(uuidv4());
+
         console.log(this.props.post);
         this.setState(
             this.props.post
@@ -21,7 +25,7 @@ class Post extends Component {
     }
 
     render() {
-        if (this.state.comments == undefined || this.state.comments.length<1) {
+        if (this.state.comments == undefined || this.state.comments.length < 1) {
             return (
                 <div className={"post_comment"}>
                     <p>{this.state.author}</p>
@@ -39,10 +43,10 @@ class Post extends Component {
                 <p>{this.state.content}</p>
                 <p><a href={"#"}>Reply</a></p>
                 <ul className={"simple_nested"}>
-                    {this.state.comments.map((post)=>{
-                        return(
+                    {this.state.comments.map((post) => {
+                        return (
                             <li>
-                                <Post post ={post}/>
+                                <Post post={post}/>
                             </li>
                         )
                     })}

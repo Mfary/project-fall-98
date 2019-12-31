@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Topic from "./Topic/Topic";
+import TopicThumbnail from "./Topic/TopicThumbnail";
 import data from "../static/jsons/topic"
 
 class FirstPage extends Component {
@@ -11,7 +11,7 @@ class FirstPage extends Component {
                 {data.map((topic) => {
                     console.log(topic)
                     return (
-                        <Topic topicObject={topic} key={topic.id}/>
+                        <TopicThumbnail topicObject={topic} key={topic.id}/>
 
                     )
 
