@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import data from '../../static/jsons/topic'
 
 
-
 class TopicPage extends Component {
 
     state = {
@@ -18,7 +17,7 @@ class TopicPage extends Component {
         const whole_id = id;
         const topic = data.find((element) => element.id == id)
         this.setState({
-            wholde_id : whole_id,
+            whole_id: whole_id,
             topic: topic
 
         })
@@ -26,7 +25,7 @@ class TopicPage extends Component {
     }
 
     render() {
-        let content =(this.state.topic != null && this.state.topic.content != undefined)
+        let content = (this.state.topic != null && this.state.topic.content != undefined)
             ? this.state.topic.content : "nothing";
         let title = (this.state.topic != null && this.state.topic.title != undefined)
             ? this.state.topic.content : "nothing";
@@ -34,8 +33,8 @@ class TopicPage extends Component {
 
         return (
             <div>
-                <div className="container py-3" >
-                    <div className="card" style={{width: "100%", maxHeight: "auto" , height: "auto"}}>
+                <div className="container py-3">
+                    <div className="card" style={{width: "100%", maxHeight: "auto", height: "auto"}}>
                         <div className="row ">
                             <div className="col-md-1" style={{margin: "15px"}}>
                                 <img src="https://via.placeholder.com/100x150"
