@@ -105,7 +105,7 @@ class TextArea extends Component {
         console.log(this.state.title);
         console.log(this.state.content);
         const uuidv4 = require('uuid/v4');
-        let id = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+        let id = uuidv4();
         let date = new Date();
         console.log(date.toDateString())
         let obje = {
