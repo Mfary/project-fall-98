@@ -18,8 +18,8 @@ class Post extends Component {
                                 <textarea className="form-control" id="textarea" placeholder="write"  required ></textarea>
                             </div>
                             <div className="form-group row">
-                                <label htmlFor="repeatPassword">Confirm password</label>
-                                <input type="password" className="form-control" id="repeatPassword" placeholder="old"  required />
+                                <label htmlFor="file">Confirm password</label>
+                                <input type="file" className="form-control" id="file" />
                             </div>
                             <div>
                                 <button type="submit" className="btn btn-primary">Post</button>
