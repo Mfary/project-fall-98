@@ -1,25 +1,27 @@
 import React, {Component} from 'react';
 import "./topic.css"
 import Axios from "axios";
+import {Link} from "react-router-dom";
 
-class Topic extends Component {
+class TopicThumbnail extends Component {
 
     state = {
         topic: {}
     };
 
     componentDidMount() {
-        const post = this.props.topicObject;
-        console.log(post)
+        const topic = this.props.topicObject;
+        console.log(topic)
         console.log("heloo")
         this.setState({
-            topic: post
+            topic: topic
         })
 
     }
 
     render() {
         let content = this.state.topic.content != undefined ? this.state.topic.content.substr(0, 47) + "..." : "nothing";
+        let redirect = "/topic/"+this.state.topic.id;
         return (
 
             <div className="container py-3" >
@@ -33,9 +35,10 @@ class Topic extends Component {
                         <div className="col-md-8 px-3">
                             <div className="card-block px-3">
                                 <h4 className="card-title">{this.state.topic.title}</h4>
-                                <p className="card-text">{content} </p>
+                                <p className="card-text" dangerouslySetInnerHTML={{__html:content}}/>
+                                {/*TODO PRIOR TO XSS ATTACK*/}
 
-                                <a href="#" className="btn btn-primary">Read More</a>
+                                <Link to={redirect} className="btn btn-primary">Read More</Link>
                             </div>
                         </div>
 
@@ -56,4 +59,4 @@ class Topic extends Component {
 }
 
 
-export default Topic;
+export default TopicThumbnail;
