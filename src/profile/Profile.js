@@ -9,7 +9,7 @@ class Profile extends Component {
         if (!this.props.me.checked)
             temp = <Follow follow={this.props.follow}/>
         else
-            temp = <Edit />
+            temp = <Edit/>
         return (
             <div className="container">
                 <div className="row">
@@ -22,24 +22,20 @@ class Profile extends Component {
                             <h2 className="card-title">{this.props.name}</h2>
                             <div className="row">
                                 <div className="col-3 item">
-                                    follwers
+                                    <a href="">
+                                        {this.props.followers}<br/>
+                                        follwers
+                                    </a>
                                 </div>
                                 <div className="col-3 item">
-                                    follwing
+                                    <a href="">
+                                        {this.props.following}<br/>
+                                        follwing
+                                    </a>
                                 </div>
                                 <div className="col-3 item">
+                                    {this.props.posts}<br/>
                                     posts
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-3 item">
-                                    {this.props.followers}
-                                </div>
-                                <div className="col-3 item">
-                                    {this.props.following}
-                                </div>
-                                <div className="col-3 item">
-                                    {this.props.posts}
                                 </div>
                             </div>
                         </div>
