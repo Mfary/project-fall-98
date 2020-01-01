@@ -5,11 +5,11 @@ class Follow extends Component {
     render() {
         let button;
         if(this.props.folloew)
-            button = <a href="#" class="btn btn-danger">unfollow</a>;
+            button = <a href="#" class="nav-item nav-link activer" title="unfollow"><i className="fas fa-user-plus"></i> </a>;
         else
-            button = <a href="#" class="btn btn-success">follow</a>;
+            button = <a href="#" class="nav-item nav-link active" title="Follow"><i className="fas fa-user-alt-slash"></i> </a>;
         return (
-            <div className="container">
+            <div className="navbar-nav">
                 { button }
             </div>
         )

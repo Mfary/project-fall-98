@@ -5,15 +5,18 @@ import "./style.css"
 
 class Profile extends Component {
     render() {
-        let button;
-        if (this.props.me.checked)
-            button = <Edit/>
+        let temp;
+        if (!this.props.me.checked)
+            temp = <Follow follow={this.props.follow}/>
         else
-            button = <Follow follow={this.props.follow}/>
+            temp = <Edit />
         return (
             <div className="container">
                 <div className="row">
-                    <div className="card col-8" style={{ margin : "auto"  }}>
+                    <div className="card col-8" style={{margin: "auto"}}>
+                        <nav className="navbar navbar-expand-lg navbar-light">
+                            {temp}
+                        </nav>
                         <div className="card-body">
                             <img className="col-3 img" src={this.props.image} alt=""/>
                             <h2 className="card-title">{this.props.name}</h2>
@@ -43,7 +46,6 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div id="posts"></div>
-                <sidebar />
             </div>
         )
     }

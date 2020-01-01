@@ -4,16 +4,13 @@ import "./style.css"
 class Edit extends Component {
     render() {
         return (
-            <div className="button-container col-9">
-                <div>
-                    <a href="#" class="btn btn-primary">Edit profile</a>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-primary">Change password</a>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-primary">Post</a>
-                </div>
+            <div className="navbar-nav">
+                <a className="nav-item nav-link active" href="#" title="Write a post"><i
+                    className="fas fa-pencil-alt"></i></a>
+                <a className="nav-item nav-link" href="#" title="Change password"><i
+                    className="fas fa-lock"></i></a>
+                <a className="nav-item nav-link" href="#" title="Edit profile"><i className="fas fa-edit"></i>
+                </a>
             </div>
         )
     }
