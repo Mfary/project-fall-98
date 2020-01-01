@@ -34,6 +34,9 @@ class Navbar extends Component {
                                 <a className="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/notification">Notification <ion-icon name="notifications"></ion-icon></a>
+                        </li>
 
 
                     </ul>

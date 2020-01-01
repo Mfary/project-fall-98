@@ -8,6 +8,7 @@ import SignUp from "./components/Signs/SignUp";
 import TopicThumbnail from "./components/Topic/TopicThumbnail";
 import FirstPage from "./components/FirstPage";
 import PostMaker from "./components/Posts/PostMaker";
+import NotificationPage from "./components/NotificationPage";
 import TopicPage from "./components/Topic/TopicPage";
 
 class App extends Component {
@@ -23,7 +24,9 @@ class App extends Component {
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>
                     <Route exact path="/PostMaker" render={() => <PostMaker/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
+                    <Route exact path="/notification" render={() => <NotificationPage/>}/>
                 </Switch>
+
 
 
             </BrowserRouter>
