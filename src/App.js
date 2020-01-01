@@ -9,6 +9,7 @@ import TopicThumbnail from "./components/Topic/TopicThumbnail";
 import FirstPage from "./components/FirstPage";
 import PostMaker from "./components/Posts/PostMaker";
 import TopicPage from "./components/Topic/TopicPage";
+import Profile from "./profile/Profile";
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>
                     <Route exact path="/PostMaker" render={() => <PostMaker/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
+                    <Route path="/profile"  render={() => <Profile name="Ali" followers="33.5K" following="4.1K" posts="10k" me={{checked:true}}/>}></Route>
                 </Switch>
 
 
