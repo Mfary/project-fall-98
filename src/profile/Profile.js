@@ -1,49 +1,46 @@
 import React, {Component} from 'react'
 import "./style.css"
+import Follow from "./follow";
+import Edit from "./edit";
 
 class Profile extends Component {
     render() {
         let button;
-        if(this.props.folloew)
-            button = <button>unfollow</button>;
+        if (this.props.me)
+            button = <Edit/>
         else
-            button = <button>follow</button>;
+            button = <Follow follow={this.props.follow}/>
         return (
             <div className="container">
-                <img src={this.props.image} alt=""/>
-                <h1>{this.props.name}</h1>
-                { button }
-                <table>
-                    <thead>
-                    <tr>
-                        <th>
+                <div className="card">
+                    <img className="card-img-top" src={this.props.image} alt=""/>
+                    <div className="card-body">
+                        <h2 className="card-title">{this.props.name}</h2>
+                        {button}
+                        <div className="col-4">
                             follwers
-                        </th>
-                        <th>
+                        </div>
+                        <div className="col-4">
                             follwing
-                        </th>
-                        <th>
+                        </div>
+                        <div className="col-4">
                             posts
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            { this.props.followers }
-                        </td>
-                        <td>
-                            { this.props.foll0wing }
-                        </td>
-                        <td>
-                            { this.props.posts }
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                        <div className="col-4">
+                            {this.props.followers}
+                        </div>
+                        <div className="col-4">
+                            {this.props.foll0wing}
+                        </div>
+                        <div className="col-4">
+                            {this.props.posts}
+                        </div>
+                    </div>
+                </div>
                 <div id="posts"></div>
             </div>
         )
     }
 }
+
 export default Profile
