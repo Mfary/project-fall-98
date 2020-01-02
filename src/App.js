@@ -18,28 +18,23 @@ import Users from "./static/jsons/profiles"
 class App extends Component {
     state = {
         users: [],
-        onlineUser : ""
     }
     componentDidMount() {
         console.log("he")
         this.setState({
             users : Users
         })
-        console.log(this.state.users.length)
-        this.state.users.map((user) => {
-            console.log(user.id, user.id === "98102345")
-            if (user.id === "98102345"){
-                this.setState({
-                    onlineUser : user
-                })
-                console.log("#", this.state.onlineUser)
-            }
-        })
-        console.log("wqqqw")
-        console.log(this.state.onlineUser)
     }
 
     render() {
+        let onlineUser
+        this.state.users.map((user) => {
+            console.log(user.id, user.id === "98102345")
+            if (user.id === "98102345"){
+                onlineUser = user
+            }
+        })
+        console.log("LLLLLLLLL",onlineUser)
         return (
             <BrowserRouter>
                 <Navbar/>
@@ -52,7 +47,7 @@ class App extends Component {
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>
                     <Route exact path="/PostMaker" render={() => <PostMaker/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
-                    <Route path="/profile"  render={() => <ProfileContainer user={this.state.onlineUser} me={{checked:true , follow:false}}/>}></Route>
+                    <Route path="/profile"  render={() => <ProfileContainer user={onlineUser} me={{checked:true , follow:false}}/>}></Route>
                     <Route path="/notification" render={() => <NotificationPage/>} ></Route>
                 </Switch>
 

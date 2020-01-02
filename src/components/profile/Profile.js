@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 
 class profile extends Component {
     render() {
+        console.log(this.props.user)
         return (
             <div className="card-body">
                 <img className="col-3 img" src={this.props.image} alt=""/>
