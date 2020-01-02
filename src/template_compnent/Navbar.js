@@ -35,7 +35,7 @@ class Navbar extends Component {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/notification">Notification <ion-icon name="notifications"></ion-icon></a>
+                            <a className="nav-link" href="/notification">Notification <span><i className="fas fa-bell"></i></span></a>
                         </li>
 
 

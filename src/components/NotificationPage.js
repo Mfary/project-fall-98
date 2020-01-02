@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import NewFollowers from "./NewFollowers/NewFollowers";
 import data from "../static/jsons/newFollowers"
 import newComments from '../static/jsons/NewComments'
-import NewComment from "./NewComment";
+import NewComment from "./NewComments/NewComment";
 
 class NotificationPage extends Component {
     state = {

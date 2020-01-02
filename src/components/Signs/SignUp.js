@@ -9,12 +9,7 @@ class SignUp extends Component {
                     <div className="d-flex justify-content-center">
                         <div className="card">
                             <div className="card-header">
-                                <h3>Sign Up</h3>
-                                <div className="d-flex justify-content-end social_icon">
-                                    <span><i className="fab fa-facebook-square"></i></span>
-                                    <span><i className="fab fa-google-plus-square"></i></span>
-                                    <span><i className="fab fa-twitter-square"></i></span>
-                                </div>
+                                <h3 style={{color : "black"}}>Sign Up</h3>
                             </div>
                             <div className="card-body">
                                 <form>
@@ -56,7 +51,7 @@ class SignUp extends Component {
                                         <input type="text" className="form-control" placeholder="your city" required/>
                                     </div>
                                     <div className="row align-items-center remember">
-                                        <input type="checkbox"/>Remember Me
+                                        <input type="checkbox"/><span style={{color : "black"}}>Remember Me</span>
                                     </div>
                                     <div className="form-group">
                                         <input type="submit" value="Login" className="btn float-right login_btn"/>
@@ -64,8 +59,8 @@ class SignUp extends Component {
                                 </form>
                             </div>
                             <div className="card-footer">
-                                <div className="d-flex justify-content-center links">
-                                    Have an account?<a href="/sign">Sign in</a>
+                                <div className="d-flex justify-content-center links" style={{color : "black"}}>
+                                    Have an account?<a href="/sign" style={{color : "blue"}}>Sign in</a>
                                 </div>
                             </div>
                         </div>
