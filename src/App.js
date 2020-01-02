@@ -13,8 +13,26 @@ import TopicPage from "./components/Topic/TopicPage";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import Post from "./components/profile/post";
 import ChangePassword from "./components/profile/changePass";
+import users from "static/jsons/profiles"
 
 class App extends Component {
+    state = {
+        users: [],
+        onlineUser : ""
+    }
+    componentDidMount() {
+        this.setState({
+            users : users
+        })
+        this.state.users.map((user) => {
+            if (user.id === "98102345"){
+                this.setState({
+                    onlineUser : user
+                })
+            }
+        })
+    }
+
     render() {
         return (
             <BrowserRouter>
@@ -28,7 +46,7 @@ class App extends Component {
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>
                     <Route exact path="/PostMaker" render={() => <PostMaker/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
-                    <Route path="/profile"  render={() => <ProfileContainer name="Ali" followers="33.5K" following="4.1K" posts="10k" me={{checked:true , follow:false}}/>}></Route>
+                    <Route path="/profile"  render={() => <ProfileContainer user={this.state.onlineUser} me={{checked:true , follow:false}}/>}></Route>
                     <Route path="/notification" render={() => <NotificationPage/>} ></Route>
                 </Switch>
 

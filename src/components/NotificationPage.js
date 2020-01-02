@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NewFollowers from "./NewFollowers/NewFollowers";
-import data from "../static/jsons/newFollowers"
+import data from "../static/jsons/profiles"
 import newComments from '../static/jsons/NewComments'
 import NewComment from "./NewComments/NewComment";
 

@@ -2,7 +2,7 @@
   {
     "name": "Asghar",
     "id": "98102345",
-    "passwordd": "98102345",
+    "password": "98102345",
     "image": "",
     "email": "asghar@gmail.com",
     "country": "IRAN",
@@ -11,13 +11,14 @@
     "channels": [],
     "posts": [],
     "followingChannels": [],
-    "followingUser": [],
-    "followers": []
+    "followingUser": ["97105642","97153126","94107190"],
+    "followers": ["97105642","97153126","94107190"],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Ahamd",
     "id": "97105642",
-    "passwordd": "97105642",
+    "password": "97105642",
     "image": "",
     "email": "ahmad@gmail.com",
     "country": "USA",
@@ -27,12 +28,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Mohammad",
     "id": "97153126",
-    "passwordd": "97153126",
+    "password": "97153126",
     "image": "",
     "email": "mfarahani@gmail.com",
     "country": "Turkey",
@@ -42,12 +44,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Lily",
     "id": "94107190",
-    "passwordd": "94107190",
+    "password": "94107190",
     "image": "",
     "email": "lily@gmail.com",
     "country": "China",
@@ -57,12 +60,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Leila",
     "id": "96425103",
-    "passwordd": "96425103",
+    "password": "96425103",
     "image": "",
     "email": "leila@gmail.com",
     "country": "Afghanestan",
@@ -72,12 +76,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Farhad",
     "id": "95624397",
-    "passwordd": "95624397",
+    "password": "95624397",
     "image": "",
     "email": "fahad@gmail.com",
     "country": "India",
@@ -87,12 +92,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Farbod",
     "id": "91254687",
-    "passwordd": "91254687",
+    "password": "91254687",
     "email": "farbod@gmail.com",
     "country": "Russia",
     "city": "Mosscow",
@@ -101,12 +107,13 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Mammad",
     "id": "93142349",
-    "passwordd": "93142349",
+    "password": "93142349",
     "email": "mammad@gmail.com",
     "country": "Brazil",
     "city": "Rio De Janeiro",
@@ -115,7 +122,8 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   },
   {
     "name": "Ali",
@@ -129,6 +137,7 @@
     "posts": [],
     "followingChannels": [],
     "followingUser": [],
-    "followers": []
+    "followers": [],
+    "imageProfile" : "https://get.pxhere.com/photo/man-person-people-hair-boy-male-portrait-model-spring-macro-blue-hairstyle-smile-beard-photograph-portrait-photography-facial-hair-946516.jpg"
   }
 ]

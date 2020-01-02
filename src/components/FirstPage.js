@@ -9,7 +9,7 @@ class FirstPage extends Component {
     render() {
         return (
             <div>
-                <TextArea isVisible={"true"} isTopicVisible={"true"} isForChannel = {"true"}/>
+                {/*<TextArea isVisible={"true"} isTopicVisible={"true"} isForChannel = {"true"}/>*/}
                 <div>
                     {data.map((topic) => {
                         console.log(topic)
