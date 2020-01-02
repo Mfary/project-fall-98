@@ -13,3 +13,7 @@
 .item{
     text-align: center;
 }
+a,a:hover{
+    text-decoration: None;
+    color: black;
+}

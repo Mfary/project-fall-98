@@ -5,7 +5,7 @@ class Edit extends Component {
     render() {
         return (
             <div className="navbar-nav">
-                <a className="nav-item nav-link active" href="#" title="Write a post"><i
+                <a className="nav-item nav-link active" href="/post" title="Write a post"><i
                     className="fas fa-pencil-alt"></i></a>
                 <a className="nav-item nav-link" href="/changepass" title="Change password"><i
                     className="fas fa-lock"></i></a>
