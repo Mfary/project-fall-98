@@ -30,6 +30,7 @@ class App extends Component {
                     <Route exact path="/Post" render={() => <Post/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
                     <Route path="/profile"  render={() => <Profile name="Ali" followers="33.5K" following="4.1K" posts="10k" me={{checked:true}}/>}></Route>
+                    <Route path="/notification" render={() => <NotificationPage/>} ></Route>
                 </Switch>
 
 

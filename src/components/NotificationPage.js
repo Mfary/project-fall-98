@@ -1,17 +1,22 @@
 import React, {Component} from 'react';
 import NewFollowers from "./NewFollowers/NewFollowers";
 import data from "../static/jsons/newFollowers"
+import newComments from '../static/jsons/NewComments'
+import NewComment from "./NewComment";
 
 class NotificationPage extends Component {
     state = {
-        usersData : []
+        usersData : [],
+        newComments:[]
     }
 
     componentDidMount() {
         console.log(data)
         this.setState({
-            usersData : data
+            usersData : data,
+            newComments : newComments
         })
+
     }
 
     render() {
@@ -22,6 +27,11 @@ class NotificationPage extends Component {
                            <NewFollowers user={user}/>
                        )
                    })}
+                {this.state.newComments.map((comment) => {
+                    return(
+                        <NewComment comment={comment}/>
+                    )
+                })}
             </div>
         )
     }
