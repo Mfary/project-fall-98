@@ -6,9 +6,9 @@ class ChannelCard extends Component {
         return (
             <div className="card col-md-3">
                 <div className="card-body">
-                    <h5 className="card-title">{this.props.channel.title}</h5>
+                    <h5 className="card-title">{this.props.channel.channel.title}</h5>
                     <p className="card-text">
-                        {this.props.channel.content}
+                        {this.props.channel.channel.content}
                     </p>
                 </div>
             </div>
