@@ -16,12 +16,12 @@ class Post extends Component {
                                            required/>
                                 </div>
                                 <div className="form-group row">
-                                    <label htmlFor="textarea">New password</label>
+                                    <label htmlFor="textarea">Content</label>
                                     <textarea className="form-control" id="textarea" placeholder="write"
                                               required></textarea>
                                 </div>
                                 <div className="form-group row">
-                                    <label htmlFor="file">Confirm password</label>
+                                    <label htmlFor="file">Attach File</label>
                                     <input type="file" className="form-control" id="file"/>
                                 </div>
                                 <div>
