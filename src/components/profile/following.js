@@ -5,7 +5,7 @@ import UserCard from "./UserCard";
 import ch from "../../static/jsons/channels"
 import ChannelCard from "./ChannelCard";
 
-class Followers extends Component {
+class Following extends Component {
     state = {
         users: [],
         channels: [],
@@ -23,6 +23,7 @@ class Followers extends Component {
     render() {
         return (
             <div className="container">
+                <h2>Following</h2>
                 <h3>Users</h3>
                 <hr/>
                 {this.state.users.map((user) => {
@@ -34,7 +35,7 @@ class Followers extends Component {
                 <h3>Channels</h3>
                 <hr/>
                 {this.state.channels.map((channel) => {
-                    if (this.props.user.id in this.channels.member)
+                    if (channel.id in this.props.user.followingChannels )
                         return (
                             <ChannelCard channel={channel}/>
                         )
@@ -44,4 +45,4 @@ class Followers extends Component {
     }
 }
 
-export default Followers
+export default Following
