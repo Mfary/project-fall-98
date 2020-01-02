@@ -14,13 +14,12 @@ import ChannelPage from "../Channel/channelPage";
 class ProfileContainer extends Component {
 
     componentDidMount() {
-
-
+        // console.log(this.props.user)
     }
 
     render() {
-        console.log(this.props.user)
         let temp;
+        console.log("fuck",this.props.user)
         if (!this.props.me.checked)
             temp = <Follow me={this.props.me}/>
         else
@@ -32,12 +31,12 @@ class ProfileContainer extends Component {
                         <nav className="navbar navbar-expand-lg navbar-light">
                             {temp}
                         </nav>
-                        <Route exact path="/profile"  render={() => <Profile user={this.props.user} />}></Route>
+                        <Route exact path="/profile"  render={() => <Profile user={{user: this.props.user.user}} />}></Route>
                         <Route exact path="/profile/changepass" render={() => <ChangePassword />}></Route>
                         <Route exact path="/profile/Post" render={() => <Post/>}></Route>
                         <Route exact path="/profile/edit" render={() => <EditProf />}></Route>
-                        <Route exact path="/profile/following" render={() => <Following />}></Route>
-                        <Route exact path="/profile/followers" render={() => <Followers />}></Route>
+                        <Route exact path="/profile/following" render={() => <Following user={{user: this.props.user.user}}/>}></Route>
+                        <Route exact path="/profile/followers" render={() => <Followers user={{user: this.props.user.user}}/>}></Route>
                         <Route exact path="/profile/makeChannel" render={() => <ChannelPage/>}></Route>
 
                     </div>

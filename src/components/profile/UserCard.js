@@ -5,9 +5,9 @@ class UserCard extends Component {
     render() {
         return (
             <div className="card col-md-3">
-                <img className="card-img-top" src={this.user.image} alt="User image"/>
+                <img className="card-img-top" src={this.props.user.user.image} alt="User image"/>
                 <div className="card-body">
-                    <h5 className="card-title">{this.user.name}</h5>
+                    <h5 className="card-title">{this.props.user.user.name}</h5>
                 </div>
             </div>
         )
