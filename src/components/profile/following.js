@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import "./style.css"
 import data from "../../static/jsons/profiles"
 import UserCard from "./UserCard";
-import ch from "../../static/jsons/channels"
+import ch from "../../static/jsons/Channels"
 import ChannelCard from "./ChannelCard";
 
 class Following extends Component {

@@ -12,6 +12,11 @@ import Following from "./following";
 import ChannelPage from "../Channel/channelPage";
 
 class ProfileContainer extends Component {
+
+    componentDidMount() {
+        console.log(this.props.user)
+    }
+
     render() {
         let temp;
         if (!this.props.me.checked)

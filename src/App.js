@@ -13,7 +13,7 @@ import TopicPage from "./components/Topic/TopicPage";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import Post from "./components/profile/post";
 import ChangePassword from "./components/profile/changePass";
-import users from "static/jsons/profiles"
+import Users from "./static/jsons/profiles"
 
 class App extends Component {
     state = {
@@ -21,16 +21,22 @@ class App extends Component {
         onlineUser : ""
     }
     componentDidMount() {
+        console.log("he")
         this.setState({
-            users : users
+            users : Users
         })
+        console.log(this.state.users.length)
         this.state.users.map((user) => {
+            console.log(user.id, user.id === "98102345")
             if (user.id === "98102345"){
                 this.setState({
                     onlineUser : user
                 })
+                console.log("#", this.state.onlineUser)
             }
         })
+        console.log("wqqqw")
+        console.log(this.state.onlineUser)
     }
 
     render() {

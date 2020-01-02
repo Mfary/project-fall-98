@@ -16,7 +16,7 @@ class NotificationPage extends Component {
             usersData : data,
             newComments : newComments
         })
-
+        console.log(this.state.usersData)
     }
 
     render() {
