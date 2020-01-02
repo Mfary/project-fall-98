@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "./style.css"
 
-class Edit extends Component {
+class EditProf extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Edit extends Component {
         )
     }
 }
-export default Edit
+export default EditProf
