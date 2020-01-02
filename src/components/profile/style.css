@@ -24,3 +24,6 @@ a,a:hover{
 a:hover{
     cursor: pointer;
 }
+.center{
+    margin: auto;
+}

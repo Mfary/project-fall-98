@@ -6,6 +6,7 @@ import {Route} from "react-router-dom";
 import Profile from "./Profile";
 import ChangePassword from "./changePass";
 import Post from "./post";
+import EditProf from "./editProf"
 
 class ProfileContainer extends Component {
     render() {
@@ -24,6 +25,7 @@ class ProfileContainer extends Component {
                         <Route exact path="/profile"  render={() => <Profile name={this.props.name} followers={this.props.followers} following={this.props.following} posts={this.props.posts} />}></Route>
                         <Route exact path="/profile/changepass" render={() => <ChangePassword />}></Route>
                         <Route exact path="/profile/Post" render={() => <Post/>}></Route>
+                        <Route exact path="/profile/edit" render={() => <EditProf />}></Route>
 
                     </div>
                 </div>
