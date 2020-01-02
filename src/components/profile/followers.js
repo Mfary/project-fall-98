@@ -20,9 +20,9 @@ class Followers extends Component {
             <div className="container">
                 <h2>Follwers</h2>
                 {this.state.users.map((user) => {
-                    if (user.id in this.props.user.user.followers)
+                    if (user.id in this.props.user.followers)
                         return (
-                            <UserCard user={{user :user}}/>
+                            <UserCard user={ user }/>
                         )
                 })}
 
