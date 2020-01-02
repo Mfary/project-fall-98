@@ -29,13 +29,19 @@ class SignUp extends Component {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" className="form-control" placeholder="password" required={}/>
+                                        <input type="password" className="form-control" placeholder="password" required/>
                                     </div>
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-phone"></i></span>
                                         </div>
                                         <input type="tel" className="form-control" placeholder="phone number" required/>
+                                    </div>
+                                    <div className="input-group form-group">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text"><i className="fas fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" className="form-control" placeholder="email@mail.com" required/>
                                     </div>
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
@@ -48,13 +54,6 @@ class SignUp extends Component {
                                             <span className="input-group-text"><i className="fas fa-city"></i></span>
                                         </div>
                                         <input type="text" className="form-control" placeholder="your city" required/>
-                                    </div>
-                                    <div className="input-group form-group">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text"><i className="fas fa-envelope"></i></span>
-                                        </div>
-                                        <input type="email" className="form-control" placeholder="email@mail.com" required/>
-
                                     </div>
                                     <div className="row align-items-center remember">
                                         <input type="checkbox"/>Remember Me
