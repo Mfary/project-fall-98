@@ -20,6 +20,7 @@ class NotificationPage extends Component {
     }
 
     render() {
+        console.log(this.state.usersData)
         return(
             <div className="container">
                 {this.state.usersData.map((user) => {

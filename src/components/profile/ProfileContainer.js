@@ -14,10 +14,12 @@ import ChannelPage from "../Channel/channelPage";
 class ProfileContainer extends Component {
 
     componentDidMount() {
-        console.log(this.props.user)
+
+
     }
 
     render() {
+        console.log(this.props.user)
         let temp;
         if (!this.props.me.checked)
             temp = <Follow me={this.props.me}/>

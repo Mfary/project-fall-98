@@ -18,6 +18,7 @@ import Users from "./static/jsons/profiles"
 class App extends Component {
     state = {
         users: [],
+        onlineUser : ""
     }
     componentDidMount() {
         console.log("he")

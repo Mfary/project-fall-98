@@ -27,17 +27,17 @@ class Following extends Component {
                 <h3>Users</h3>
                 <hr/>
                 {this.state.users.map((user) => {
-                    if (user.id in this.props.user.followingUser)
+                    if (user.id in this.props.user.user.followingUser)
                         return (
-                            <UserCard user={user}/>
+                            <UserCard user={{user: user}}/>
                         )
                 })}
                 <h3>Channels</h3>
                 <hr/>
                 {this.state.channels.map((channel) => {
-                    if (channel.id in this.props.user.followingChannels )
+                    if (channel.id in this.props.user.user.followingChannels )
                         return (
-                            <ChannelCard channel={channel}/>
+                            <ChannelCard channel={{channel: channel}}/>
                         )
                 })}
             </div>
