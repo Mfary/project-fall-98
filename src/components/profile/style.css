@@ -1,5 +1,6 @@
 .container{
     height: auto;
+    margin: auto;
 }
 .button-container {
     width: 100%;
@@ -16,4 +17,10 @@
 a,a:hover{
     text-decoration: None;
     color: black;
+}
+.card{
+    margin: auto;
+}
+a:hover{
+    cursor: pointer;
 }

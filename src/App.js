@@ -10,9 +10,9 @@ import FirstPage from "./components/FirstPage";
 import PostMaker from "./components/Posts/PostMaker";
 import NotificationPage from "./components/NotificationPage";
 import TopicPage from "./components/Topic/TopicPage";
-import Profile from "./profile/Profile";
-import Post from "./profile/post";
-import ChangePassword from "./profile/changePass";
+import Profile from "./components/profile/Profile";
+import Post from "./components/profile/post";
+import ChangePassword from "./components/profile/changePass";
 
 class App extends Component {
     render() {
