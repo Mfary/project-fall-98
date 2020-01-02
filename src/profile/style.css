@@ -1,0 +1,19 @@
+.container{
+    height: auto;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.img{
+    border-radius: 100%;
+    float: right;
+}
+.item{
+    text-align: center;
+}
+a,a:hover{
+    text-decoration: None;
+    color: black;
+}

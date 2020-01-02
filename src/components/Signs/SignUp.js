@@ -6,7 +6,7 @@ class SignUp extends Component {
         return (
             <div id="signUpContainer">
                 <div className="container">
-                    <div className="d-flex justify-content-center h-100">
+                    <div className="d-flex justify-content-center">
                         <div className="card">
                             <div className="card-header">
                                 <h3>Sign Up</h3>
@@ -22,14 +22,38 @@ class SignUp extends Component {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" className="form-control" placeholder="username"/>
+                                        <input type="text" className="form-control" placeholder="username" required/>
 
                                     </div>
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" className="form-control" placeholder="password"/>
+                                        <input type="password" className="form-control" placeholder="password" required/>
+                                    </div>
+                                    <div className="input-group form-group">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text"><i className="fas fa-phone"></i></span>
+                                        </div>
+                                        <input type="tel" className="form-control" placeholder="phone number" required/>
+                                    </div>
+                                    <div className="input-group form-group">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text"><i className="fas fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" className="form-control" placeholder="email@mail.com" required/>
+                                    </div>
+                                    <div className="input-group form-group">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text"><i className="fas fa-flag"></i></span>
+                                        </div>
+                                        <input type="text" className="form-control" placeholder="country" required/>
+                                    </div>
+                                    <div className="input-group form-group">
+                                        <div className="input-group-prepend">
+                                            <span className="input-group-text"><i className="fas fa-city"></i></span>
+                                        </div>
+                                        <input type="text" className="form-control" placeholder="your city" required/>
                                     </div>
                                     <div className="row align-items-center remember">
                                         <input type="checkbox"/>Remember Me

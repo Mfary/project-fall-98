@@ -10,6 +10,9 @@ import FirstPage from "./components/FirstPage";
 import PostMaker from "./components/Posts/PostMaker";
 import NotificationPage from "./components/NotificationPage";
 import TopicPage from "./components/Topic/TopicPage";
+import Profile from "./profile/Profile";
+import Post from "./profile/post";
+import ChangePassword from "./profile/changePass";
 
 class App extends Component {
     render() {
@@ -22,11 +25,12 @@ class App extends Component {
                     <Route exact path="/sign" render={() => <Sign/>}></Route>
                     <Route exact path="/signUp" render={() => <SignUp/>}></Route>
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>
+                    <Route exact path="/changepass" render={() => <ChangePassword />}></Route>
                     <Route exact path="/PostMaker" render={() => <PostMaker/>}></Route>
+                    <Route exact path="/Post" render={() => <Post/>}></Route>
                     <Route path="/topic/:topic_id"  component={TopicPage}></Route>
-                    <Route exact path="/notification" render={() => <NotificationPage/>}/>
+                    <Route path="/profile"  render={() => <Profile name="Ali" followers="33.5K" following="4.1K" posts="10k" me={{checked:true}}/>}></Route>
                 </Switch>
-
 
 
             </BrowserRouter>
