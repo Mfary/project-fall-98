@@ -11,7 +11,7 @@ class ProfileContainer extends Component {
     render() {
         let temp;
         if (!this.props.me.checked)
-            temp = <Follow follow={this.props.follow}/>
+            temp = <Follow me={this.props.me}/>
         else
             temp = <Edit/>
         return (
