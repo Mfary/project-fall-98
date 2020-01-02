@@ -24,10 +24,11 @@ class Following extends Component {
         return (
             <div className="container">
                 <h2>Following</h2>
+                <br />
                 <h3>Users</h3>
                 <hr/>
                 {this.state.users.map((user) => {
-                    if (user.id in this.props.user.followingUser)
+                    if (this.props.user.followingUsers.includes(user.id))
                         return (
                             <UserCard user={ user }/>
                         )
@@ -35,7 +36,7 @@ class Following extends Component {
                 <h3>Channels</h3>
                 <hr/>
                 {this.state.channels.map((channel) => {
-                    if (channel.id in this.props.user.followingChannels )
+                    if (this.props.user.followingChannels.includes(channel.id) )
                         return (
                             <ChannelCard channel={ channel }/>
                         )

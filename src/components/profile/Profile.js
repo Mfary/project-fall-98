@@ -16,12 +16,12 @@ class profile extends Component {
                     </div>
                     <div className="col-3 item">
                         <a href="/profile/following">
-                            {this.props.user.followingUser.length + this.props.user.followingChannel}<br/>
+                            {this.props.user.followingUsers.length + this.props.user.followingChannels.length}<br/>
                             following
                         </a>
                     </div>
                     <div className="col-3 item">
-                        {this.props.user.posts}<br/>
+                        {this.props.user.posts.length}<br/>
                         posts
                     </div>
                     <div id="posts"></div>

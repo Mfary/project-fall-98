@@ -29,7 +29,7 @@ class App extends Component {
 
     render() {
         let onlineUser
-        this.state.users.map((user) => {
+        Users.map((user) => {
             console.log(user.id, user.id === "98102345")
             if (user.id === "98102345"){
                 onlineUser = user
