@@ -6,6 +6,9 @@ import {Route} from "react-router-dom";
 import Profile from "./Profile";
 import ChangePassword from "./changePass";
 import Post from "./post";
+import EditProf from "./editProf"
+import Followers from "./followers";
+import Following from "./following";
 import ChannelPage from "../Channel/channelPage";
 
 class ProfileContainer extends Component {
@@ -25,6 +28,9 @@ class ProfileContainer extends Component {
                         <Route exact path="/profile"  render={() => <Profile user={this.props.user} />}></Route>
                         <Route exact path="/profile/changepass" render={() => <ChangePassword />}></Route>
                         <Route exact path="/profile/Post" render={() => <Post/>}></Route>
+                        <Route exact path="/profile/edit" render={() => <EditProf />}></Route>
+                        <Route exact path="/profile/following" render={() => <Following />}></Route>
+                        <Route exact path="/profile/followers" render={() => <Followers />}></Route>
                         <Route exact path="/profile/makeChannel" render={() => <ChannelPage/>}></Route>
 
                     </div>

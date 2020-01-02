@@ -11,7 +11,7 @@ class Edit extends Component {
                     className="fas fa-pencil-alt"></i></a>
                 <a className="nav-item nav-link" href="/profile/changepass" title="Change password"><i
                     className="fas fa-lock"></i></a>
-                <a className="nav-item nav-link" href="#" title="Edit profile"><i className="fas fa-edit"></i>
+                <a className="nav-item nav-link" href="/profile/edit" title="Edit profile"><i className="fas fa-edit"></i>
                 </a>
                 <a className="nav-item nav-link" href="/profile/makeChannel" title="Channels"><i className="fas fa-rss"></i>
                 </a>
