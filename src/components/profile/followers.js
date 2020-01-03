@@ -15,17 +15,19 @@ class Followers extends Component {
         })
 
     }
+
     render() {
         return (
             <div className="container">
                 <h2>Follwers</h2>
-                {this.state.users.map((user) => {
-                    if (this.props.user.followers.includes(user.id))
-                        return (
-                            <UserCard user={ user }/>
-                        )
-                })}
-
+                <div className="row">
+                    {this.state.users.map((user) => {
+                        if (this.props.user.followers.includes(user.id))
+                            return (
+                                <UserCard user={user}/>
+                            )
+                    })}
+                </div>
             </div>
         )
     }

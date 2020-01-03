@@ -27,7 +27,7 @@ class Following extends Component {
                 <br/>925627
                 <h3>Users</h3>
                 <hr/>
-                <div className="container">
+                <div className="row">
                     {this.state.users.map((user) => {
                         if (this.props.user.followingUsers.includes(user.id))
                             return (
@@ -37,7 +37,7 @@ class Following extends Component {
                 </div>
                 <h3>Channels</h3>
                 <hr/>
-                <div className="container">
+                <div className="row">
                     {this.state.channels.map((channel) => {
                         if (this.props.user.followingChannels.includes(channel.id))
                             return (

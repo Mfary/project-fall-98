@@ -2,49 +2,55 @@ import React, {Component} from 'react';
 import channels from '../../static/jsons/Channels'
 import ChannelCard from "../profile/ChannelCard";
 
-class ChannelPage extends Component{
+class ChannelPage extends Component {
 
     state = {
-        channels : []
+        channels: []
     }
 
     componentDidMount() {
         this.setState({
-            channels : channels,
+            channels: channels,
         })
     }
 
     render() {
-        return(
+        return (
             <div className="container">
-                <h3 >my Channels</h3>
-                <hr />
-                {this.state.channels.map((channel) => {
-                    if (this.props.user.channels.includes(channel.id))
-                        return (
-                            <ChannelCard channel={channel}/>
-                        )
-                })}
-                <h3 >Author in Channels</h3>
-                <hr />
-                {this.state.channels.map((channel) => {
-                    if (this.props.user.authoredChannels.includes(channel.id))
-                        return (
-                            <ChannelCard channel={channel}/>
-                        )
-                })}
-                <button className="btn btn-primary " style={{marginBottom : "10px"}} type="button" data-toggle="collapse"
+                <h2>Channels</h2>
+                <hr/>
+                <h3>my Channels</h3>
+                <hr/>
+                <div className="row">
+                    {this.state.channels.map((channel) => {
+                        if (this.props.user.channels.includes(channel.id))
+                            return (
+                                <ChannelCard channel={channel}/>
+                            )
+                    })}
+                </div>
+                <h3>Author in Channels</h3>
+                <hr/>
+                <div className="row">
+                    {this.state.channels.map((channel) => {
+                        if (this.props.user.authoredChannels.includes(channel.id))
+                            return (
+                                <ChannelCard channel={channel}/>
+                            )
+                    })}
+                </div>
+                <button className="btn btn-primary " style={{marginBottom: "10px"}} type="button" data-toggle="collapse"
                         data-target="#collapseInputForm"
                         aria-expanded="false" aria-controls="collapseExample">
                     Make New Channel
                 </button>
                 <div className={"collapse"} id={"collapseInputForm"}>
-                    <form >
+                    <form>
                         <div>
                             <div className="md-form">
                                 <label htmlFor="form1">Name</label>
                                 <input type="text" id="form1" className="form-control"
-                                       />
+                                />
                             </div>
                             <div className="md-form">
                                 <label htmlFor="form1">Title</label>
@@ -63,7 +69,7 @@ class ChannelPage extends Component{
                                 <textarea className="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
                                           placeholder="Write something here to make a new channel"
                                           value={this.state.content}
-                                          ></textarea>
+                                ></textarea>
                             </div>
 
                         </div>
@@ -78,4 +84,5 @@ class ChannelPage extends Component{
     }
 
 }
+
 export default ChannelPage
