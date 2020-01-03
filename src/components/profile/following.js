@@ -24,7 +24,7 @@ class Following extends Component {
         return (
             <div className="container">
                 <h2>Following</h2>
-                <br/>925627
+                <br/>
                 <h3>Users</h3>
                 <hr/>
                 <div className="row">
