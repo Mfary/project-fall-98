@@ -24,23 +24,27 @@ class Following extends Component {
         return (
             <div className="container">
                 <h2>Following</h2>
-                <br />925627
+                <br/>925627
                 <h3>Users</h3>
                 <hr/>
-                {this.state.users.map((user) => {
-                    if (this.props.user.followingUsers.includes(user.id))
-                        return (
-                            <UserCard user={ user }/>
-                        )
-                })}
+                <div className="container">
+                    {this.state.users.map((user) => {
+                        if (this.props.user.followingUsers.includes(user.id))
+                            return (
+                                <UserCard user={user}/>
+                            )
+                    })}
+                </div>
                 <h3>Channels</h3>
                 <hr/>
-                {this.state.channels.map((channel) => {
-                    if (this.props.user.followingChannels.includes(channel.id) )
-                        return (
-                            <ChannelCard channel={ channel }/>
-                        )
-                })}
+                <div className="container">
+                    {this.state.channels.map((channel) => {
+                        if (this.props.user.followingChannels.includes(channel.id))
+                            return (
+                                <ChannelCard channel={channel}/>
+                            )
+                    })}
+                </div>
             </div>
         )
     }

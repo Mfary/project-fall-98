@@ -37,7 +37,7 @@ class ProfileContainer extends Component {
                         <Route exact path="/profile/edit" render={() => <EditProf />}></Route>
                         <Route exact path="/profile/following" render={() => <Following user={this.props.user}/>}></Route>
                         <Route exact path="/profile/followers" render={() => <Followers user={this.props.user}/>}></Route>
-                        <Route exact path="/profile/makeChannel" render={() => <ChannelPage/>}></Route>
+                        <Route exact path="/profile/makeChannel" render={() => <ChannelPage user={this.props.user}/>}></Route>
 
                     </div>
                 </div>

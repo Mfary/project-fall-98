@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import channels from '../../static/jsons/Channels'
+import ChannelCard from "../profile/ChannelCard";
 
 class ChannelPage extends Component{
 
@@ -16,9 +17,22 @@ class ChannelPage extends Component{
     render() {
         return(
             <div className="container">
-                <h3 >Channels</h3>
+                <h3 >my Channels</h3>
                 <hr />
-                {/*TODO Channels*/}
+                {this.state.channels.map((channel) => {
+                    if (this.props.user.channels.includes(channel.id))
+                        return (
+                            <ChannelCard channel={channel}/>
+                        )
+                })}
+                <h3 >Author in Channels</h3>
+                <hr />
+                {this.state.channels.map((channel) => {
+                    if (this.props.user.authoredChannels.includes(channel.id))
+                        return (
+                            <ChannelCard channel={channel}/>
+                        )
+                })}
                 <button className="btn btn-primary " style={{marginBottom : "10px"}} type="button" data-toggle="collapse"
                         data-target="#collapseInputForm"
                         aria-expanded="false" aria-controls="collapseExample">
