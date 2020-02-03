@@ -17,14 +17,14 @@ class Sign extends Component {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" className="form-control" placeholder="username"/>
+                                        <input type="email" id="email" name="email" className="form-control" placeholder="email@mail.com"/>
 
                                     </div>
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" className="form-control" placeholder="password"/>
+                                        <input id="password" name="password" type="password" className="form-control" placeholder="password"/>
                                     </div>
                                     <div className="row align-items-center remember">
                                         <input type="checkbox" /><span style={{color : "black"}}>Remember Me</span>
