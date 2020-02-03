@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
+
+
+
 import "./sign.css"
+
 class SignUp extends Component {
     render() {
         console.log("Hello")
@@ -54,4 +58,5 @@ class SignUp extends Component {
     }
 
 }
+
 export default SignUp
