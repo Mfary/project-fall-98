@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.cards-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.home-card{
+  transition: all 0.3s ease-in-out;
+}
+.home-card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+.notif-icon{
+  background-color: #FFC312;
+  height: 20px;
+  width: 20px;
+}
