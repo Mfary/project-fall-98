@@ -29,7 +29,9 @@ class Forget extends Component {
         fetch("http://127.0.0.1:8000/api/account/forgetPassword", requestOptions)
             .then(response => response.text())
             .then(function (result) {
-                alert(result)
+                let obj =  JSON.parse(result)
+                let msg = obj.msg;
+                alert(msg)
             })
             .catch(error => {
                 alert('error' + error)

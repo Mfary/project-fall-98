@@ -29,9 +29,7 @@ class Navbar extends Component {
                         <li className="nav-item active">
                             <a className="nav-link" href="/Home">Home <span className="sr-only">(current)</span></a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/profile">Profile</a>
-                        </li>
+
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,10 +67,15 @@ class Navbar extends Component {
                         ) :
                         (
                             <ul className="form-inline my-2 my-lg-0 navbar-nav" style={{margin: "10px"}}>
-                                <li className="nav-item btn-primary btn-sm" style={{margin: "5px"}}>
-                                    <a className="nav-link" href="/signup" onClick={this.logout.bind(this)}
+                                <li className="nav-item btn-primary btn-sm">
+                                    <a className="nav-link" href="/profile" style={{color: "white"}}>Profile</a>
+                                </li>
+                                <li className="nav-item btn-danger btn-sm" style={{margin: "5px"}}>
+                                    <a className="nav-link" href="/sign" onClick={this.logout.bind(this)}
                                        style={{color: "white"}}>Log Out</a>
                                 </li>
+
+
                             </ul>)}
                 </div>
             </nav>
