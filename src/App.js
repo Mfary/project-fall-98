@@ -14,6 +14,7 @@ import ProfileContainer from "./components/profile/ProfileContainer";
 import Post from "./components/profile/post";
 import ChangePassword from "./components/profile/changePass";
 import Users from "./static/jsons/profiles"
+import Forget from "./components/Signs/Forget";
 
 class App extends Component {
     state = {
@@ -43,6 +44,7 @@ class App extends Component {
 
                 <Switch>
                     <Route exact path="/" render={() => <FirstPage/>}></Route>
+                    <Route exact path="/forgetpass" render={() => <Forget/>}></Route>
                     <Route exact path="/sign" render={() => <Sign/>}></Route>
                     <Route exact path="/signUp" render={() => <SignUp/>}></Route>
                     <Route exact path="/Home" render={() => <FirstPage/>}></Route>

@@ -103,7 +103,7 @@ class Sign extends Component {
                                     Don't have an account?<a href="/signUp " style={{color: "blue"}}>Sign Up</a>
                                 </div>
                                 <div className="d-flex justify-content-center">
-                                    <a href="#" style={{color: "blue"}}>Forgot your password?</a>
+                                    <a href="/forgetpass" style={{color: "blue"}}>Forgot your password?</a>
                                 </div>
                             </div>
                         </div>
