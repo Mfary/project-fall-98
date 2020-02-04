@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from 'axios';
 import "./sign.css"
 
 
@@ -15,6 +14,10 @@ async function submit() {
     let first_name = document.getElementById("first_name").value;
     let phone_number = document.getElementById("phone_number").value;
     let picture = null;
+    if (!(document.getElementById("username").validity.valid && document.getElementById("email").validity.valid && document.getElementById("password").validity.valid && document.getElementById("first_name").validity.valid && document.getElementById("last_name").validity.valid)){
+        alert("one of username, email, password, first name, last name is wrong")
+        return
+    }
 
 
     var myHeaders = new Headers();
@@ -40,8 +43,8 @@ async function submit() {
 
     fetch("http://127.0.0.1:8000/api/account/signup", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        .then(result => alert('You signed up successfully'))
+        .catch(error => alert('error' + error));
 
 }
 
