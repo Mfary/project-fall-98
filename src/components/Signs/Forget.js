@@ -26,10 +26,12 @@ class Forget extends Component {
             redirect: 'follow'
         };
 
-        fetch("127.0.0.1:8000/api/account/forgetPassword", requestOptions)
+        fetch("http://127.0.0.1:8000/api/account/forgetPassword", requestOptions)
             .then(response => response.text())
             .then(function (result) {
-                alert(result)
+                let obj =  JSON.parse(result)
+                let msg = obj.msg;
+                alert(msg)
             })
             .catch(error => {
                 alert('error' + error)
