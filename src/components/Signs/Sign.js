@@ -1,5 +1,34 @@
 import React, {Component} from 'react'
 import "./sign.css"
+
+async function submit() {
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        "password": password,
+        "username": username,
+    });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("http://127.0.0.1:8000/api/account/login", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+}
+
 class Sign extends Component {
     render() {
         console.log("Hello")
@@ -12,12 +41,12 @@ class Sign extends Component {
                                 <h3 style={{color : "black"}}>Sign In</h3>
                             </div>
                             <div className="card-body">
-                                <form>
+
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="email" id="email" name="email" className="form-control" placeholder="email@mail.com"/>
+                                        <input type="text" id="username" name="username" className="form-control" placeholder="username"/>
 
                                     </div>
                                     <div className="input-group form-group">
@@ -30,9 +59,13 @@ class Sign extends Component {
                                         <input type="checkbox" /><span style={{color : "black"}}>Remember Me</span>
                                     </div>
                                     <div className="form-group">
-                                        <input type="submit" value="Login" className="btn float-right login_btn"/>
+                                        <input onClick={function () {
+                                            console.log("BUTTON ON CLICK")
+                                            submit()
+
+                                        }} type="submit" value="Login" className="btn float-right login_btn"/>
                                     </div>
-                                </form>
+
                             </div>
                             <div className="card-footer">
                                 <div className="d-flex justify-content-center links" style={{color : "black"}}>
