@@ -11,14 +11,15 @@ class ChannelPage extends Component {
 
         let username = document.getElementById("name").value;
         let title = document.getElementById("title").value;
-        let rules = document.getElementById("rule").value;
+        let rules = document.getElementById("rules").value;
         let desc = document.getElementById("description").value;
 
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Authorization","Bearer "+localStorage.getItem("ACCESS_TOKEN"))
 
-        if (!(document.getElementById("title").validity.valid && document.getElementById("name").validity.valid && document.getElementById("title").validity.valid && document.getElementById("desc").validity.valid)) {
+        if (!(document.getElementById("title").validity.valid && document.getElementById("name").validity.valid && document.getElementById("description").validity.valid && document.getElementById("rules").validity.valid)) {
             alert("something in input is wrong")
             return
         }
@@ -102,7 +103,7 @@ class ChannelPage extends Component {
                         </div>
                         <div className="md-form">
                             <label htmlFor="form1">Title</label>
-                            <input type="text" id="title" className="form-control" placeholder="ittle"
+                            <input type="text" id="title" className="form-control" placeholder="title"
                             />
                         </div>
                         <div className="md-form">
@@ -113,10 +114,10 @@ class ChannelPage extends Component {
                     </div>
                     <div>
                         <div className="form-group shadow-textarea">
-                            <label htmlFor="decription">Content</label>
+                            <label htmlFor="description">description</label>
                             <textarea className="form-control z-depth-1" id="description" rows="3"
-                                      placeholder="Write something here to make a new channel"
-                                      value="decribe your channel"></textarea>
+                                      placeholder="Describe your channel" maxLength="200"
+                            ></textarea>
                         </div>
 
                     </div>
