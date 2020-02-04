@@ -21,11 +21,11 @@ class EditProf extends Component {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Authorization", "Bearer " + localStorage.getItem("ACCESS_TOKEN"))
-
-        if (!(document.getElementById("username").validity.valid && document.getElementById("email").validity.valid && document.getElementById("last_name").validity.valid && document.getElementById("first_name").validity && document.getElementById("phone_number").validity.valid &&document.getElementById("pic").validity.valid &&document.getElementById("city").validity.valid && document.getElementById("country").validity.valid)){
-            alert("some required input is not given")
-            return
-        }
+        //
+        // if (!(document.getElementById("username").validity.valid && document.getElementById("email").validity.valid && document.getElementById("last_name").validity.valid && document.getElementById("first_name").validity && document.getElementById("phone_number").validity.valid &&document.getElementById("pic").validity.valid &&document.getElementById("city").validity.valid && document.getElementById("country").validity.valid)){
+        //     alert("some required input is not given")
+        //     return
+        // }
 
             var raw = JSON.stringify({
                 "email": email,
