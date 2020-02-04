@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Follow from "./follow";
 import Edit from "./edit";
 import "./style.css"
-import {Route} from "react-router-dom";
+import {Redirect, Route} from "react-router-dom";
 import Profile from "./Profile";
 import ChangePassword from "./changePass";
 import Post from "./post";
@@ -18,6 +18,9 @@ class ProfileContainer extends Component {
     }
 
     render() {
+        if (localStorage.getItem("ACCESS_TOKEN") == null && localStorage.getItem("ACCESS_TOKEN") == undefined) {
+            return (<Redirect to="/signUp"/>)
+        }
         let temp;
         //console.log("fuck",this.props.user,this.props)
         if (!this.props.me.checked)
