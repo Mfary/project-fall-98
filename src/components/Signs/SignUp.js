@@ -3,7 +3,6 @@ import "./sign.css"
 
 
 async function submit() {
-    const axios = require('axios')
     console.log("Sdaskldj")
     let username = document.getElementById("username").value;
     let email = document.getElementById("email").value;
