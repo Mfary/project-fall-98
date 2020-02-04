@@ -15,6 +15,10 @@ async function submit() {
     let first_name = document.getElementById("first_name").value;
     let phone_number = document.getElementById("phone_number").value;
     let picture = null;
+    if (document.getElementById("username").validity.valid && document.getElementById("email").validity.valid && document.getElementById("password").validity.valid && document.getElementById("first_name").validity.valid && document.getElementById("last_name").validity.valid){
+        alert("one of username, email, password, first name, last name is wrong")
+        return
+    }
 
 
     var myHeaders = new Headers();
