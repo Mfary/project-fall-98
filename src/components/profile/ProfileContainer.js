@@ -19,7 +19,7 @@ class ProfileContainer extends Component {
 
     render() {
         let temp;
-        console.log("fuck",this.props.user,this.props)
+        //console.log("fuck",this.props.user,this.props)
         if (!this.props.me.checked)
             temp = <Follow me={this.props.me}/>
         else

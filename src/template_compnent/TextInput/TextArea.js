@@ -102,12 +102,12 @@ class TextArea extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state.title);
-        console.log(this.state.content);
+        //console.log(this.state.title);
+        //console.log(this.state.content);
         const uuidv4 = require('uuid/v4');
         let id = uuidv4();
         let date = new Date();
-        console.log(date.toDateString())
+        //console.log(date.toDateString())
         let obje = {
             id: id,
             title: this.state.title,
@@ -118,9 +118,9 @@ class TextArea extends Component {
         };
 
         const newData = [obje , ...data];
-        console.log(newData);
+       // console.log(newData);
         const jsoner = JSON.stringify( newData);
-        console.log(jsoner)
+        //console.log(jsoner)
         //TODO SAVE IN FILE
 
 

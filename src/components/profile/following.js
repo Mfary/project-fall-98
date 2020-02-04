@@ -12,7 +12,7 @@ class Following extends Component {
     }
 
     componentDidMount() {
-        console.log(data)
+        //console.log(data)
         this.setState({
             users: data,
             channels: ch

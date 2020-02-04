@@ -30,12 +30,12 @@ class App extends Component {
     render() {
         let onlineUser
         Users.map((user) => {
-            console.log(user.id, user.id === "98102345")
+            //console.log(user.id, user.id === "98102345")
             if (user.id === "98102345"){
                 onlineUser = user
             }
         })
-        console.log("LLLLLLLLL",onlineUser)
+        //console.log("LLLLLLLLL",onlineUser)
         return (
             <BrowserRouter>
                 <Navbar/>
