@@ -67,7 +67,7 @@ class ChangePassword extends Component {
                     <div className="card col-sm-6 col-lg-8">
                         <h3 className="card-title">Change password</h3>
                         <div className="card-body">
-                            <form>
+
                                 <div className="form-group row">
                                     <label htmlFor="newPassword">New password</label>
                                     <input type="password" className="form-control" id="newPassword"
@@ -82,7 +82,7 @@ class ChangePassword extends Component {
                                     <button onClick={this.insideSubmit} type="submit" className="btn btn-primary">Change</button>
                                     <button onClick={this.reset} type="reset" className="btn btn-primary">reset</button>
                                 </div>
-                            </form>
+
                         </div>
                     </div>
                 </div>
