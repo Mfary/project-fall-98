@@ -3,7 +3,17 @@ import logo from "../static/img/reddit-logo.png"
 import {Link} from 'react-router-dom'
 
 class Navbar extends Component {
+
+    logout() {
+        localStorage.removeItem("ACCESS_TOKEN")
+        this.forceUpdate();
+    }
+
     render() {
+
+        if (localStorage.getItem("ACCESS_TOKEN") != null && localStorage.getItem("ACCESS_TOKEN") != undefined) {
+            console.log("NAVBAR")
+        }
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="/"><img
@@ -35,7 +45,8 @@ class Navbar extends Component {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/notification">Notification <span><i className="fas fa-bell"></i></span></a>
+                            <a className="nav-link" href="/notification">Notification <span><i
+                                className="fas fa-bell"></i></span></a>
                         </li>
 
 
@@ -46,14 +57,23 @@ class Navbar extends Component {
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
-                    <ul className="form-inline my-2 my-lg-0 navbar-nav" style={{margin: "10px"}}>
-                        <li className="nav-item btn-primary btn-sm" style={{margin: "5px"}}>
-                            <a className="nav-link" href="/sign" style={{color: "white"}}>Sign In</a>
-                        </li>
-                        <li className="nav-item btn-success btn-sm">
-                            <a className="nav-link" href="/signUp" style={{color: "white"}}>Sign Up</a>
-                        </li>
-                    </ul>
+                    {(!(localStorage.getItem("ACCESS_TOKEN") != null && localStorage.getItem("ACCESS_TOKEN") != undefined)) ? (
+                            <ul className="form-inline my-2 my-lg-0 navbar-nav" style={{margin: "10px"}}>
+                                <li className="nav-item btn-primary btn-sm" style={{margin: "5px"}}>
+                                    <a className="nav-link" href="/sign" style={{color: "white"}}>Sign In</a>
+                                </li>
+                                <li className="nav-item btn-success btn-sm">
+                                    <a className="nav-link" href="/signUp" style={{color: "white"}}>Sign Up</a>
+                                </li>
+                            </ul>
+                        ) :
+                        (
+                            <ul className="form-inline my-2 my-lg-0 navbar-nav" style={{margin: "10px"}}>
+                                <li className="nav-item btn-primary btn-sm" style={{margin: "5px"}}>
+                                    <a className="nav-link" href="/signup" onClick={this.logout.bind(this)}
+                                       style={{color: "white"}}>Log Out</a>
+                                </li>
+                            </ul>)}
                 </div>
             </nav>
 

@@ -61,7 +61,7 @@ class Sign extends Component {
     render() {
 
         if (localStorage.getItem("ACCESS_TOKEN") != null && localStorage.getItem("ACCESS_TOKEN") != undefined) {
-            return <Redirect to='/'/>
+            return (<Redirect to="/"/>)
         }
         console.log("Hello")
         return (
