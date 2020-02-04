@@ -10,6 +10,11 @@ async function submit() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    if(!(document.getElementById("password").validity.valid && document.getElementById("username").validity.valid)){
+        alert("something in input is wrong")
+        return
+    }
+
     var raw = JSON.stringify({
         "password": password,
         "username": username,
@@ -34,7 +39,7 @@ async function submit() {
             console.log(localStorage.getItem("ACCESS_TOKEN"))
             console.log("OK");
         })
-        .catch(error => console.log('error', error));
+        .catch(error => alert('error'+error));
 
 }
 
