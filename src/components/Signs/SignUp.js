@@ -43,8 +43,8 @@ async function submit() {
 
     fetch("http://127.0.0.1:8000/api/account/signup", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        .then(result => alert('You signed up successfully'))
+        .catch(error => alert('error' + error));
 
 }
 
